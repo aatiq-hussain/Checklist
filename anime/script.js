@@ -101,10 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
         newHeaderRow.className = 'header-row';
         newHeaderRow.innerHTML = `<td style="font-weight:bolder;">${rowIdCounter}</td>
         <td><textarea placeholder="Enter drawing number" class="drawing-number"></textarea></td>
-        <td "><textarea style="z-index: -1;position: absolute; width:2px;" placeholder="Enter title" class="title"></textarea></td>
-        <td><textarea style="z-index: -1;position: absolute; width:2px;" placeholder="" class="Responsibility"></textarea></td>
+        <td "><textarea style="z-index: -1;position: absolute; width:2px; height:1px;" placeholder="Enter title" class="title"></textarea></td>
+        <td><textarea style="z-index: -1;position: absolute; width:2px; height:1px;" placeholder="" class="Responsibility"></textarea></td>
          <td>
-            <select style="z-index: -1;position: absolute; width:2px;" class="priority" style="min-width:105px;" onchange="changeStatusColor(this)">
+            <select style="z-index: -1;position: absolute; width:2px; height:1px;" class="priority"  onchange="changeStatusColor(this)">
             <option value=""  style="display:none;"> Priority</option>
                 <option value="High" style=" color:white; background-color: #D50000;">High</option>
                 <option value="Medium" style=" color:white; background-color: #D3B001;">Medium</option>
@@ -112,16 +112,16 @@ document.addEventListener('DOMContentLoaded', function() {
             </select>
         </td>
         <td>
-            <select  style="z-index: -1;position: absolute; width:2px;" class="status" style="min-width:150px;" onchange="changeStatusColor(this)">
+            <select  style=" z-index: -1;position: absolute; width:2px; height:1px;" class="status"  onchange="changeStatusColor(this)">
                 <option value=""  style="display:none;">Status</option>
                 <option value="Not Received" style=" color:white; background-color: #D50000;">Not Received</option>
                 <option value="Received" style=" color:white; background-color: #239D01;">Received</option>
                 <option value="Not Applicable<"style=" color:black; ">Not Applicable</option>
             </select>
         </td>
-        <td><textarea style="z-index: -1;position: absolute; width:2px;" placeholder=" " class="comment"></textarea></td>
-        <td><textarea  style="z-index: -1;position: absolute; width:2px;" placeholder="" class="link"></textarea></td>
-        <td><input style="z-index: -1;position: absolute; width:2px; "  type="date" class="date-received"></td>
+        <td><textarea style="z-index: -1;position: absolute; width:2px; height:1px; " placeholder=" " class="comment"></textarea></td>
+        <td><textarea  style="z-index: -1;position: absolute; width:2px; height:1px; " placeholder="" class="link"></textarea></td>
+        <td><input style="z-index: -1;position: absolute; width:2px; height:1px; "  type="date" class="date-received"></td>
         <td><button class="delete-btn"><i class="fas fa-trash-alt"></i></button></td>
      `;
         checklistTable.appendChild(newHeaderRow);
