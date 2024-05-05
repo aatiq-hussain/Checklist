@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newHeaderRow = document.createElement('tr');
         newHeaderRow.className = 'header-row';
         newHeaderRow.innerHTML = `<td style="font-weight:bolder;"></td>
-        <td><textarea placeholder="Enter drawing number" style="font-size:19px; font-weight:bold;" class="drawing-number"></textarea></td>
+        <td><textarea placeholder="Enter Header" style="font-size:19px; font-weight:bold;" class="drawing-number"></textarea></td>
         <td "><textarea style="z-index: -1;position: absolute; width:0px; height:0px;" placeholder="Enter title" class="title"></textarea></td>
         <td><textarea style="z-index: -1;position: absolute; width:0px; height:0px;" placeholder="" class="Responsibility"></textarea></td>
          <td>
