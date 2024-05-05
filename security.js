@@ -67,7 +67,7 @@ authForm.addEventListener('submit', (e) => {
                 const user = userCredential.user;
                 authMessage.textContent = "Login successful!";
                 setTimeout(() => {
-                    window.location.href = "/Checklist//src/index.html"; // Redirect to successful login page
+                    window.location.href = "/Checklist/src/index.html"; // Redirect to successful login page
                 }, 1000); // Change delay as needed
             })
             .catch((error) => {
