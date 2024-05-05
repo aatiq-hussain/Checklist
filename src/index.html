@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="checklist-section">
+            <div class="top-section">
+                <input type="text" placeholder="Enter header" class="title" style="width: 50%; font-size: 1.8em; font-weight: bold; border:solid 2px rgba(255, 255, 255, 0);">
+                <div class="button-section">
+                    <button id="newTaskBtn">New Doc</button>
+                    <button id="newHeaderBtn">New Header</button>
+                    <button id="newSaveBtn">Save</button>
+                    <a href="/src/dis.html"> <button id="Dash">View Mode</button></a>
+                </div>
+                <!-- <button id="toggleBtn" class="dropdown-icon">▼</button> -->
+            </div>
+            <div class="bottom-section">
+                <table id="checklistTable">
+                    <thead>
+                        <tr>
+                            <th>ID No</th>
+                            <th>Doc Code</th>
+                            <th>Title</th>
+                            <th>Responsibility</th>
+                            <th>Priority</th>
+                            <th>Status</th>                            
+                            <th>Remarks</th>
+                            <th>Link</th>
+                            <th>Date received</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="/anime/fire.js"> </script>
+        <script src="/anime/script.js"></script>
+</body>
+</html>

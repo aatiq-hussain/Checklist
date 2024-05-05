@@ -1,0 +1,88 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('toggleBtn');
+    const bottomSection = document.querySelector('.bottom-section');
+
+    toggleBtn.addEventListener('click', function() {
+        bottomSection.classList.toggle('collapsed');
+        if (bottomSection.classList.contains('collapsed')) {
+            toggleBtn.innerText = '▼';
+        } else {
+            toggleBtn.innerText = '▲';
+        }
+    });
+
+    const newTaskBtn = document.getElementById('newTaskBtn');
+    const newHeaderBtn = document.getElementById('newHeaderBtn');
+    const checklistTable = document.getElementById('checklistTable').getElementsByTagName('tbody')[0];
+
+    let rowIdCounter = 0; // Counter for auto incrementing row IDs
+
+    newTaskBtn.addEventListener('click', function() {
+        addNewRow();
+    });
+
+    newHeaderBtn.addEventListener('click', function() {
+        addNewHeader();
+    });
+
+    checklistTable.addEventListener('click', function(event) {
+        const target = event.target;
+        if (target.classList.contains('delete-btn')) {
+            const row = target.closest('tr');
+            if (row.classList.contains('header-row')) {
+                row.remove();
+            } else {
+                row.remove();
+                renumberRows();
+            }
+        }
+    });
+
+    function addNewRow() {
+        rowIdCounter++;
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${rowIdCounter}</td>
+            <td><input type="text" placeholder="Enter drawing number" class="drawing-number"></td>
+            <td><input type="text" placeholder="Enter title" class="title"></td>
+            <td>
+                <select class="status">
+                    <option value="Applicable">Applicable</option>
+                    <option value="Not Applicable">Not Applicable</option>
+                    <option value="Received">Received</option>
+                </select>
+            </td>
+            <td>
+                <select class="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </td>
+            <td><input type="text" placeholder="Enter Remarks " class="comment"></td>
+            <td><input type="text"placeholder="Enter link "  class="link"></td>
+            <td><input type="date"  class="date-received"></td>
+            <td><button class="delete-btn"><i class="fas fa-trash-alt"></i></button></td>
+
+        `;
+        checklistTable.appendChild(newRow);
+    }
+
+    function addNewHeader() {
+        const newHeaderRow = document.createElement('tr');
+        newHeaderRow.className = 'header-row';
+        newHeaderRow.innerHTML = `
+            <td colspan="8"><input type="text" placeholder="Enter header " class="header-text"></td>
+            <td><button class="delete-btn"><i class="fas fa-trash-alt"></i></button></td>
+
+        `;
+        checklistTable.appendChild(newHeaderRow);
+    }
+
+    function renumberRows() {
+        const rows = checklistTable.querySelectorAll('tr:not(.header-row)');
+        rows.forEach((row, index) => {
+            row.cells[0].innerText = index + 1;
+        });
+    }
+});

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication</title>
+  <link rel="stylesheet" href="security.css">
+</head>
+<body>
+  <div class="container">
+   
+    <h1 style="margin: 15px 0px;" >Registration <br> and Login
+    </h1> 
+    <div>
+      <form id="authForm">
+            <input type="email" id="email"  placeholder="Enter your Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="flex">
+             
+              <button type="button" id="toggleBtn">Switch to Register</button>
+              <button type="submit" id="authBtn">Login</button>
+              
+                    </div>
+            
+           
+          
+            
+        </form>
+        <p id="authMessage"></p>
+      </div>  
+  
+  </div>
+  
+  </div>
+  
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <!-- Include other Firebase services if needed -->
+  <script type="module" src="security.js"></script>
+  
+</body>
+
+</html>

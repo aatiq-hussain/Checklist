@@ -1,0 +1,240 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Set width to 100% */
+    margin: 0; /* Remove margin */
+    margin-top: 20px;
+    margin-bottom: 70px;
+   
+    
+   
+  
+}
+.title-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-section h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.title-section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.button-section button {
+    margin: 0 10px;
+    padding: 15px 25px;
+    background-color: #0263ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight:bold;
+}
+#Dash{
+    margin: 0 10px;
+   padding: 10px 20px;
+   background-color: #0263ff00;
+   color: #0263ff;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   font-weight:bold;
+}
+#newTaskBtn{
+    background-color: #0263ff;
+    color: #fff;
+}
+#newHeaderBtn{
+    background-color: #0263ff1e;
+    color: #0263ff;
+    
+}
+#newSaveBtn{
+    background-color: #0263ff00;
+    color: #0263ff;
+    
+    border: solid 1px #0263ff;
+}
+.button-section #newSaveBtn:hover , #newHeaderBtn:hover ,#newTaskBtn:hover {
+    background-color: #067aff;
+    color: #fff;
+}
+
+.checklist-section {
+    width: 100%;
+    
+    background-color: #ffffff;
+    border-radius: 8px;
+  
+    overflow: hidden;
+}
+
+.top-section {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ff626200;
+}
+
+.top-section h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.dropdown-icon {
+    margin-left: auto;
+    font-size: 1.5em;
+    color: #0263ff;
+    border-color: #0263ff;
+    cursor: pointer;
+    background-color: #ffffff00;
+}
+
+.bottom-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.bottom-section.collapsed {
+    max-height: none;
+}
+
+
+thead {
+    color: #fff;
+    font-size: small;
+}
+
+thead th {
+    padding: 15px 10px;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #ffffff;
+}
+.headertexts , .headertext {
+    background-color: #f3f3f3;
+    
+}
+.headertexts, .headertext input[type="text"]{
+    background-color: #eaeaea00;
+    border-color:#eaeaea00;
+    font-size: 16px;
+}
+
+
+tbody tr:hover {
+    background-color: #f7f6f6;
+}
+
+td {
+    padding: 15px 10px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+th {
+    border: 1px solid #ffffff;
+}
+
+th:last-child, td:last-child {
+    text-align: center;
+}
+
+input[type="text"], select,textarea, input[type="date"] {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #f7f6f600;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 13px;
+    height: auto;
+    min-height: 16px; /* Set a minimum height to prevent it from becoming too small */
+    resize: none;
+}
+
+.delete-btn {
+    padding: 8px 15px;
+    background-color: #ff001900;
+    color: #ff0019;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ffd5da;
+}
+
+
+
+select.status , select.priority {
+    background-color:#d4d4d400;
+    color: rgb(158, 158, 158);
+    border: none;
+    outline: none;
+}
+
+select.status option {
+    background-color: transparent;
+}
+
+select.status option:hover {
+    background-color: initial; /* This will remove the gray hover effect */
+}
+
+select.status::-ms-expand {
+    display: none;
+}
+
+.bottom-section {
+    overflow-y: auto;
+    max-height: 76vh; /* Adjust this value as per your requirement */
+    border-radius: 10px;
+}
+.bottom-section table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+.bottom-section th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.bottom-section thead th {
+    background-color: #0263ff;
+    font-weight: bold;
+}

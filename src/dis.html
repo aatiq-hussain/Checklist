@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Viewer</title>
+    <link rel="stylesheet" href="/style/dis.css">
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div class="dropdown">
+            <button class="dropdown-toggle" id="dropdownToggle">Select a document</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <!-- Options will be added dynamically using JavaScript -->
+            </div>
+          </div>
+          
+        <table id="checklistTable">
+            <thead>
+                <tr>
+                    <th class="hea">ID No</th>
+                    <th class="hea">Doc Code</th>
+                    <th class="hea">Title</th>
+                    <th class="hea">Responsibility</th>
+                    <th class="hea">Priority</th>
+                    <th class="hea">Status</th>
+                    <th class="hea">Remarks</th>
+                    <th class="hea">Link</th>
+                    <th class="hea">Date received</th>
+                    <th class="hea">Action</th>
+                </tr> 
+            </thead>
+            <tbody id="checklistBody">
+                <!-- Data rows will be added dynamically using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="/anime/disp.js"></script>
+</body>
+</html>
